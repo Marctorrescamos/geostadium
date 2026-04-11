@@ -1,77 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <meta charset="UTF-8">
   <title>Geostadiums – Mapa interactivo de estadios de fútbol</title>
-<meta name="description" content="Descubre estadios de fútbol en un mapa interactivo con ligas, equipos y ubicaciones." />
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Geostadium</title>
-
-  <link
-    rel="stylesheet"
-    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-  />
-
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
-
-    header {
-      background: #111827;
-      color: white;
-      padding: 16px;
-    }
-
-    #map {
-      height: calc(100vh - 70px);
-      width: 100%;
-    }
-  </style>
+  <meta name="description" content="Descubre estadios de fútbol en un mapa interactivo con ligas, equipos y ubicaciones.">
 </head>
 <body>
 
-<header>
-  <h1>Geostadium ⚽</h1>
-  <p>Mapa de estadios</p>
-</header>
-
-<div id="map"></div>
-
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-
-<script>
-  const map = L.map('map').setView([40.4168, -3.7038], 6);
-
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; OpenStreetMap contributors'
-  }).addTo(map);
-
-  const stadiums = [
-    {
-      name: "Santiago Bernabéu",
-      coords: [40.4531, -3.6883]
-    },
-    {
-      name: "Camp Nou",
-      coords: [41.3809, 2.1228]
-    },
-    {
-      name: "Metropolitano",
-      coords: [40.4362, -3.5995]
-    },
-    {
-      name: "Mestalla",
-      coords: [39.4746, -0.3584]
-    }
-  ];
-
-  stadiums.forEach(stadium => {
-    const marker = L.marker(stadium.coords).addTo(map);
-    marker.bindPopup(`<b>${stadium.name}</b>`);
-  });
-</script>
+<h1>Geostadiums</h1>
+<p>Mapa de estadios en construcción...</p>
 
 </body>
 </html>
